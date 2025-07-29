@@ -28,13 +28,13 @@ class TestSimpleCalculator(unittest.TestCase):
         self.assertEqual(self.calc.multiply(3, 2), 6)
         self.assertEqual(self.calc.multiply(2, 1), 2)
 
-    def division(self):
+    def test_division(self):
         """Test the division method."""
         self.assertEqual(self.calc.divide(2, 1), 2)
         self.assertEqual(self.calc.divide(10, 2), 5)
         self.assertEqual(self.calc.divide(-6, 2), -3)
         self.assertEqual(self.calc.divide(0, 5), 0)
-        
+
     def test_division_by_zero(self):
         """Test division by zero raises an error."""
         with self.assertRaises(ZeroDivisionError):
